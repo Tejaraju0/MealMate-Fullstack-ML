@@ -1,2 +1,11 @@
-*/node_modules/
+node_modules/
+.vscode/
 *.env
+.env
+build/
+dist/
+__pycache__/
+*.pyc
+*.log
+venv/
+.DS_Store
