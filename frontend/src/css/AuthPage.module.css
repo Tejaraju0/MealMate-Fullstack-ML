@@ -1,0 +1,311 @@
+.authPageWrapper {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.authPageWrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 20px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.247);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 0.6em;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.content {
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.roleSelection {
+    margin-bottom: 5px;
+}
+
+.roleSelection h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.roleButtons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.roleBtn {
+    flex: 1;
+    padding: 12px 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.roleBtn:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.roleBtn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+.roleBtn .icon {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.roleBtn .title {
+    font-weight: bold;
+    font-size: 0.85em;
+    margin-bottom: 3px;
+    color: black;
+}
+
+.roleBtn .desc {
+    font-size: 0.6em;
+    opacity: 0.8;
+    color: black;
+}
+
+.formSection {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formSection.active {
+    opacity: 1;
+    height: auto;
+}
+
+.authTabs {
+    display: flex;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.authTab {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: black;
+}
+
+.authTab.active {
+    background: white;
+    color: #667eea;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.formGroup {
+    margin-bottom: 10px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 2px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 7px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.8em;
+    transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.219);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.backLink {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.forgotPassword {
+  font-size: 0.75em;
+  text-align: right;
+  color: #667eea;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.resetTitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.resetWrapper {
+  padding: 20px;
+}
+
+
+.forgotPassword:hover {
+  text-decoration: underline;
+  color: #764ba2;
+}
+
+.backLink a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.backLink a:hover {
+    text-decoration: underline;
+}
+
+.passwordInput {
+  position: relative;
+}
+
+.passwordInput input {
+  padding-right: 40px !important;
+  width: 100%;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+.passwordToggle:hover {
+  color: #764ba2;
+}
+
+/* Toast overrides */
+.Toastify__toast {
+  font-family: 'Georgia', serif;
+  border-radius: 8px;
+}
+
+.Toastify__toast--success {
+  background: #4caf50;
+}
+
+.Toastify__toast--error {
+  background: #f44336;
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-height: 95vh;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    .roleButtons {
+        flex-direction: column;
+    }
+    
+    .roleBtn {
+        padding: 10px;
+    }
+    
+    .logo {
+        font-size: 1.6em;
+    }
+    
+    .formGroup input {
+        padding: 8px 10px;
+    }
+    
+    .submitBtn {
+        padding: 10px;
+    }
+}
