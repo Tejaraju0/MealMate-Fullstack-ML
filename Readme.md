@@ -62,3 +62,34 @@ REACT_APP_GOOGLE_MAPS_API_KEY=your_key
 ---
 
 **Tech:** React, Node.js, MongoDB, Python Flask, Socket.io
+
+## Docker Setup
+
+### Prerequisites
+- Docker
+- Docker Compose
+
+### Running with Docker
+
+1. Build and start all services:
+```bash
+docker-compose up --build
+```
+
+2. Access the application:
+- Frontend: http://localhost
+- Backend API: http://localhost:5000
+- ML Service: http://localhost:5001
+
+3. Stop all services:
+```bash
+docker-compose down
+```
+
+### Rebuilding After Changes
+
+If you modify dependencies:
+```bash
+docker-compose build --no-cache backend
+docker-compose up
+```

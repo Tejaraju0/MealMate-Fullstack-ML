@@ -1,0 +1,67 @@
+# Node modules
+**/node_modules
+**/npm-debug.log
+
+# Python
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.Python
+**/pip-log.txt
+**/.venv
+**/venv/
+**/ENV/
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Documentation
+README.md
+*.md
+docs/
+
+# Test files
+**/__tests__
+**/*.test.js
+**/*.spec.js
+**/coverage
+
+# Build artifacts
+**/build
+**/dist
+**/.next
+
+# Logs
+**/logs
+**/*.log
+
+# Docker files themselves
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# Other
+.editorconfig
+.prettierrc
+.eslintrc

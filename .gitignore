@@ -9,3 +9,6 @@ __pycache__/
 *.log
 venv/
 .DS_Store
+
+ml-service/models/*.pkl
+ml-service/models/*.joblib

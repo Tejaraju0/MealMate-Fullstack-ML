@@ -28,10 +28,23 @@ socketService.initialize(server);
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+  origin: [
+    process.env.FRONTEND_URL || "http://localhost:3000",
+    "http://localhost",
+    "http://localhost:80"
+  ],
   credentials: true
 }));
 app.use(express.json());
+
+// Health check for Docker
+app.get('/api/health', (req, res) => {
+  const mongoose = require('mongoose');
+  res.json({
+    status: 'OK',
+    database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
+  });
+});
 
 // Routes
 app.get('/', (req, res) => {
