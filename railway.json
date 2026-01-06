@@ -1,0 +1,10 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "frontend.Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "nginx -g 'daemon off;'",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
