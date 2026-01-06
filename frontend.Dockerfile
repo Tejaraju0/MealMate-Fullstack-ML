@@ -29,7 +29,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy custom nginx config template
-COPY ./frontend/nginx.conf /etc/nginx/templates/default.conf.template
+COPY ./frontend/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy built files from build stage
 COPY --from=build /app/build /usr/share/nginx/html
@@ -37,5 +37,5 @@ COPY --from=build /app/build /usr/share/nginx/html
 # Expose port 
 EXPOSE 80
 
-# Use envsubst to replace ${PORT} at runtime, then start nginx
-CMD ["/bin/sh", "-c", "envsubst '$$PORT' < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
