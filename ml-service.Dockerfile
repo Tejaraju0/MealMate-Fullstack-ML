@@ -21,12 +21,10 @@ COPY ml-service/ .
 # Create necessary directories if they don't exist
 RUN mkdir -p models data
 
-# Expose port
-EXPOSE 5001
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=40s \
-  CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:5001/health')"
+  CMD python -c "import urllib.request; urllib.request.urlopen(f'http://localhost:{os.getenv(\"PORT\", \"5001\")}/health')"
 
 # Start the Flask application
 CMD ["python", "ml_service.py"]
