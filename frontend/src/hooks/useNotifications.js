@@ -15,7 +15,7 @@ const useNotifications = (userId, isAuthenticated = false) => {
     isInitializing.current = true;
 
     try {
-      const serverUrl = process.env.REACT_APP_SERVER_URL || 'http://localhost:5000';
+      const serverUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       
       socketRef.current = io(serverUrl, {
         auth: { token },
